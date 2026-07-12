@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Paleta: "álbum de fotos sobre a mesa à noite" */
+  --plum-deep: #2E1F2B;      /* fundo da página, como a mesa escura */
+  --plum-soft: #3E2C3A;      /* superfícies secundárias sobre o fundo */
+  --paper: #FBF3E7;          /* cartões, como papel/foto revelada */
+  --paper-dim: #F1E4D2;
+  --ink: #33241F;            /* texto sobre papel */
+  --ink-soft: #6B5850;
+  --coral: #E88C7D;          /* fita washi / destaque quente */
+  --coral-deep: #C9614F;
+  --gold: #D9A544;           /* selo / carimbo */
+  --sage: #7C9473;           /* acerto */
+  --sage-deep: #57724B;
+  --wrong: #B65454;          /* erro, discreto */
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --radius-card: 18px;
+  --shadow-card: 0 18px 40px -12px rgba(20, 12, 18, 0.45);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--plum-deep);
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(217, 165, 68, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(232, 140, 125, 0.08), transparent 45%);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
